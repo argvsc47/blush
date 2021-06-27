@@ -7,6 +7,9 @@ If for some reason the executable is not working, try running `build.sh` on Linu
 
 <br/>
 
+## Using
+Enter `blush` in your terminal to enter blush and use `quit` to exist blush
+
 #### Contributing:
 4 space wide tab indents <br/>
 Use `f''` instead of `.format()` <br/>
