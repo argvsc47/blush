@@ -1,6 +1,6 @@
 import os
+from subprocess import call
 
-import os
 from colorama import init, Fore
 
 init(autoreset = True)
