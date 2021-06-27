@@ -1,4 +1,4 @@
-# blush
+# blush 😳
 (BionicLambda Universal SHell)
 A simple shell made in Python. Docs and possible C port incoming.
 <br/>
@@ -8,7 +8,7 @@ If for some reason the executable is not working, try running `build.sh` on Linu
 <br/>
 
 ## Using
-Enter `blush` in your terminal to enter blush and use `quit` to exist blush
+Enter `blush` in your terminal to enter blush and use `quit` to exist blush <br/>
 
 #### Contributing:
 4 space wide tab indents <br/>
