@@ -60,7 +60,7 @@ def interpret_command(cmd):
 		print(' '.join(args))
 
 	else:
-		subprocess.call(' '.join(cmd))
+		call(' '.join(cmd))
 
 while True:
 	try:
