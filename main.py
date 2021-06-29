@@ -9,14 +9,13 @@ def err(string):
 	print(Fore.RED + 'Error: ' + string)
 
 def err_no_args(command):
-	err(f'Command `{command}` can\'t have 0 arguments')
+	err(f"Command `{command}` can't have 0 arguments")
 
 def interpret_command(cmd):
 	cmd = cmd.split(' ')
 
 	command = cmd[0]
-	args = cmd
-	del args[0] #~ Remove command from args
+	args = cmd[1:]
 
 	if command == 'cd':
 		if len(args) < 1:
@@ -50,8 +49,8 @@ def interpret_command(cmd):
 		if os.path.exists(args[0]):
 			err(f'File or directory, `{args[0]}`, already exists!')
 		else:
-			file = open(args[0], 'w')
-			file.close()
+			with open(args[0], 'w') as f:
+				pass
 
 	elif command == 'dir':
 		print(os.listdir())
@@ -63,12 +62,15 @@ def interpret_command(cmd):
 		call(' '.join(cmd))
 
 while True:
+	cd = os.getcwd()
 	try:
 		try:
-			input_cmd = input(os.getcwd() + '> ')
+			input_cmd = input(cd + '> ')
 			if input_cmd == 'quit':
 				break
 			interpret_command(input_cmd)
+			if input_cmd.startswith('cd '):
+				cd = os.getcwd()
 
 		except Exception as e:
 			print(e)
